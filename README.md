@@ -8,7 +8,7 @@ Android Application for Kitten Care Game
   <img src="https://img.shields.io/badge/Play Store-2.0.0-FE7C8D">
 </a>
 <a href="https://play.google.com/store/apps/details?id=com.pleiades.pleione.kittencare">
-  <img src="https://img.shields.io/badge/Downloads-3.9k++-7EAFFE">
+  <img src="https://img.shields.io/badge/Downloads-4.2k++-7EAFFE">
 </a>
 <br><br>
 
@@ -312,7 +312,7 @@ Two tickets are charged every midnight, and we can choose the level of difficult
 
 <img src="https://user-images.githubusercontent.com/81938036/157601862-3d851b65-4ac6-4635-b14a-e893eb9baeaa.png" width="256"> <img src="https://user-images.githubusercontent.com/81938036/157601865-d4f422df-c527-4142-9d2b-4884faa6a192.png" width="256"> <img src="https://user-images.githubusercontent.com/81938036/157601867-1511c372-0dcb-4922-88d7-da5cf60c5668.png" width="256">
 
-#### I'm a scary herbivorous dino!
+#### I am a scary herbivorous dino!
 <img src="https://user-images.githubusercontent.com/81938036/157604624-e3bd059f-56e6-4d0b-8233-09225bc21892.png" width="256"> <img src="https://user-images.githubusercontent.com/81938036/157604627-43b1c8b2-e480-4233-ac75-765d0a8ad1e8.png" width="256"> <img src="https://user-images.githubusercontent.com/81938036/157604628-fbe95074-1990-46b8-85f7-4f0d90ec74d2.png" width="256">
 <br><br>
 
