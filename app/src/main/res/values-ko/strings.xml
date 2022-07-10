@@ -257,9 +257,9 @@
     <string name="pleiades_script_dispatch">(목적지는 냉장고다냥!)</string>
 
     <!-- sensitive -->
-    <string name="ad_application_id">-</string>
-    <string name="ad_unit_id_random_box">-</string>
-    <string name="ad_unit_id_ticket">-</string>
-    <string name="backup_api_key">-</string>
+    <string name="ad_application_id">ca-app-pub-1993823389104447~8158401241</string>
+    <string name="ad_unit_id_random_box">ca-app-pub-1993823389104447/3488528492</string>
+    <string name="ad_unit_id_ticket">ca-app-pub-1993823389104447/4516883791</string>
+    <string name="backup_api_key">AEdPqrEAAAAIsUzqGgnbP7WEoCrsV6qRNMa65Nj-l2zSMKybSQ</string>
 
 </resources>

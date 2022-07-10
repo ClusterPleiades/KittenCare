@@ -34,7 +34,19 @@ import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_PLEIONE_DOLL;
 import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_SCRATCHER;
 import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_TOWER;
 import static com.pleiades.pleione.kittencare.Config.KEY_BUFF;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_2021;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ALCHEMIST;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ASTRONAUT;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BEE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_CHOCO;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_DINOSAUR;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GAME_MACHINE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GIFT;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAGICIAN;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAID;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PENGUIN;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PLEIONE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SAILOR;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SEER;
 import static com.pleiades.pleione.kittencare.Config.KEY_EXPERIENCE;
 import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_DINOSAUR;
@@ -66,7 +78,7 @@ public class SplashActivity extends AppCompatActivity {
         updateAppVersion();
 
         // set test mode
-//        setTestMode();
+        setTestMode();
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -103,8 +115,17 @@ public class SplashActivity extends AppCompatActivity {
         editor.putInt(KEY_GAME_TICKET_PAJAMAS, TICKET_MAX);
         editor.putInt(KEY_GAME_TICKET_PLEIADES, TICKET_MAX);
         editor.putInt(KEY_GAME_TICKET_DINOSAUR, TICKET_MAX);
-        editor.putBoolean(KEY_COSTUME_ALCHEMIST, true);
-        editor.putBoolean(KEY_COSTUME_SEER, true);
+        editor.putBoolean(KEY_COSTUME_PLEIONE, true);
+        editor.putBoolean(KEY_COSTUME_SAILOR, true);
+        editor.putBoolean(KEY_COSTUME_GAME_MACHINE, true);
+        editor.putBoolean(KEY_COSTUME_GIFT, true);
+        editor.putBoolean(KEY_COSTUME_CHOCO, true);
+        editor.putBoolean(KEY_COSTUME_2021, true);
+        editor.putBoolean(KEY_COSTUME_BEE, true);
+        editor.putBoolean(KEY_COSTUME_PENGUIN, true);
+        editor.putBoolean(KEY_COSTUME_MAGICIAN, true);
+        editor.putBoolean(KEY_COSTUME_ASTRONAUT, true);
+        editor.putBoolean(KEY_COSTUME_MAID, true);
         editor.remove(KEY_BUFF);
         editor.apply();
     }
