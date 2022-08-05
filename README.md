@@ -8,7 +8,7 @@ Android Application for Kitten Care Game
   <img src="https://img.shields.io/badge/Play Store-2.0.0-FE7C8D">
 </a>
 <a href="https://play.google.com/store/apps/details?id=com.pleiades.pleione.kittencare">
-  <img src="https://img.shields.io/badge/Downloads-4.2k++-7EAFFE">
+  <img src="https://img.shields.io/badge/Downloads-4.3k++-7EAFFE">
 </a>
 <br><br>
 
