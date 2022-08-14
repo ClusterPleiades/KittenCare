@@ -80,17 +80,25 @@ import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_SCRATCHER;
 import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_TOWER;
 import static com.pleiades.pleione.kittencare.Config.ITEM_TYPE_CONSUMPTION;
 import static com.pleiades.pleione.kittencare.Config.KEY_BUFF;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_2021;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ALCHEMIST;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ASTRONAUT;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BEE;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_CHOCO;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_DINOSAUR;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GAME_MACHINE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GIFT;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAGICIAN;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAID;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PENGUIN;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PLEIONE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SAILOR;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SEER;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SUNFLOWER;
 import static com.pleiades.pleione.kittencare.Config.KEY_EXPERIENCE;
+import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_DINOSAUR;
+import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_PAJAMAS;
+import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_PLEIADES;
 import static com.pleiades.pleione.kittencare.Config.KEY_HAPPINESS;
 import static com.pleiades.pleione.kittencare.Config.KEY_HISTORY_ARRAY_LIST;
 import static com.pleiades.pleione.kittencare.Config.KEY_ITEM_ARRAY_LIST;
@@ -111,6 +119,7 @@ import static com.pleiades.pleione.kittencare.Config.RANDOM_BOUND_ITEM_FOUND;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_ADVERTISEMENT_ITEM;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_EASY;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_HARD;
+import static com.pleiades.pleione.kittencare.Config.TICKET_MAX;
 
 // TODO update all
 public class PrefsController {
@@ -440,6 +449,61 @@ public class PrefsController {
 
         // add costume to array list
         costumeArrayList.add(costume);
+    }
+
+    // mode
+    public void setDeveloperMode() {
+        setFanMode();
+
+        addItemPrefs(ITEM_CODE_ICE_CREAM_CAKE, 50);
+        addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 1);
+        addItemPrefs(ITEM_CODE_CHOCOLATE_ICE_CREAM, 1);
+        addItemPrefs(ITEM_CODE_CHERRY_ICE_CREAM, 1);
+        addItemPrefs(ITEM_CODE_MELON_ICE_CREAM, 1);
+        addItemPrefs(ITEM_CODE_MINT_ICE_CREAM, 1);
+        addItemPrefs(ITEM_CODE_CHERRY_CAKE, 1);
+        addItemPrefs(ITEM_CODE_CHOCOLATE_CAKE, 1);
+        addItemPrefs(ITEM_CODE_GREEN_TEA_CAKE, 1);
+        addItemPrefs(ITEM_CODE_MELON_CAKE, 1);
+        addItemPrefs(ITEM_CODE_MINT_CAKE, 1);
+        addItemPrefs(ITEM_CODE_ALCHEMY, 1);
+        addItemPrefs(ITEM_CODE_CRYSTAL_BALL, 1);
+        addItemPrefs(ITEM_CODE_PLEIONE_DOLL, 1);
+        addItemPrefs(ITEM_CODE_SCRATCHER, 1);
+        addItemPrefs(ITEM_CODE_TOWER, 1);
+
+        SharedPreferences prefs = context.getSharedPreferences(PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putInt(KEY_LEVEL, 90);
+        editor.remove(KEY_BUFF);
+        editor.putInt(KEY_HAPPINESS, 100);
+        editor.putInt(KEY_GAME_TICKET_PAJAMAS, TICKET_MAX);
+        editor.putInt(KEY_GAME_TICKET_PLEIADES, TICKET_MAX);
+        editor.putInt(KEY_GAME_TICKET_DINOSAUR, TICKET_MAX);
+//        editor.putString(KEY_LAST_HIDE_DATE_STRING, "21/04/15 14:45:04");
+
+        editor.apply();
+    }
+
+    // developer mode
+    public void setFanMode() {
+        addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 5);
+
+        SharedPreferences prefs = context.getSharedPreferences(PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putBoolean(KEY_COSTUME_DINOSAUR, true);
+        editor.putBoolean(KEY_COSTUME_BEE, true);
+        editor.putBoolean(KEY_COSTUME_PENGUIN, true);
+        editor.putBoolean(KEY_COSTUME_SUNFLOWER, true);
+        editor.putBoolean(KEY_COSTUME_MAGICIAN, true);
+        editor.putBoolean(KEY_COSTUME_ASTRONAUT, true);
+        editor.putBoolean(KEY_COSTUME_MAID, true);
+        editor.putBoolean(KEY_COSTUME_ALCHEMIST, true);
+        editor.putBoolean(KEY_COSTUME_SEER, true);
+
+        editor.apply();
     }
 
     // others

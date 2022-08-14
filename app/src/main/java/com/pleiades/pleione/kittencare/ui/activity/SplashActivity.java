@@ -77,57 +77,10 @@ public class SplashActivity extends AppCompatActivity {
         // update app version
         updateAppVersion();
 
-        // set test mode
-        setTestMode();
-
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
         finish();
-    }
-
-    // TODO delete
-    private void setTestMode() {
-        SharedPreferences prefs = getSharedPreferences(PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-
-//        editor.putInt(KEY_HAPPINESS, 40);
-//        editor.putString(KEY_LAST_HIDE_DATE_STRING, "21/04/15 14:45:04");
-
-        PrefsController prefsController = new PrefsController(activity);
-        prefsController.addItemPrefs(ITEM_CODE_ICE_CREAM_CAKE, 50);
-        prefsController.addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 1);
-        prefsController.addItemPrefs(ITEM_CODE_CHOCOLATE_ICE_CREAM, 1);
-        prefsController.addItemPrefs(ITEM_CODE_CHERRY_ICE_CREAM, 1);
-        prefsController.addItemPrefs(ITEM_CODE_MELON_ICE_CREAM, 1);
-        prefsController.addItemPrefs(ITEM_CODE_MINT_ICE_CREAM, 1);
-        prefsController.addItemPrefs(ITEM_CODE_GREEN_TEA_CAKE, 1);
-        prefsController.addItemPrefs(ITEM_CODE_CHOCOLATE_CAKE, 1);
-        prefsController.addItemPrefs(ITEM_CODE_CHERRY_CAKE, 1);
-        prefsController.addItemPrefs(ITEM_CODE_MELON_CAKE, 1);
-        prefsController.addItemPrefs(ITEM_CODE_MINT_CAKE, 1);
-        prefsController.addItemPrefs(ITEM_CODE_ALCHEMY, 1);
-        prefsController.addItemPrefs(ITEM_CODE_CRYSTAL_BALL, 1);
-        prefsController.addItemPrefs(ITEM_CODE_PLEIONE_DOLL, 1);
-        prefsController.addItemPrefs(ITEM_CODE_SCRATCHER, 1);
-        prefsController.addItemPrefs(ITEM_CODE_TOWER, 1);
-        editor.putInt(KEY_LEVEL, 90);
-        editor.putInt(KEY_GAME_TICKET_PAJAMAS, TICKET_MAX);
-        editor.putInt(KEY_GAME_TICKET_PLEIADES, TICKET_MAX);
-        editor.putInt(KEY_GAME_TICKET_DINOSAUR, TICKET_MAX);
-        editor.putBoolean(KEY_COSTUME_PLEIONE, true);
-        editor.putBoolean(KEY_COSTUME_SAILOR, true);
-        editor.putBoolean(KEY_COSTUME_GAME_MACHINE, true);
-        editor.putBoolean(KEY_COSTUME_GIFT, true);
-        editor.putBoolean(KEY_COSTUME_CHOCO, true);
-        editor.putBoolean(KEY_COSTUME_2021, true);
-        editor.putBoolean(KEY_COSTUME_BEE, true);
-        editor.putBoolean(KEY_COSTUME_PENGUIN, true);
-        editor.putBoolean(KEY_COSTUME_MAGICIAN, true);
-        editor.putBoolean(KEY_COSTUME_ASTRONAUT, true);
-        editor.putBoolean(KEY_COSTUME_MAID, true);
-        editor.remove(KEY_BUFF);
-        editor.apply();
     }
 
     // TODO check

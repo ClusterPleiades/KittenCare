@@ -22,6 +22,7 @@ import androidx.appcompat.app.AlertDialog;
 import com.pleiades.pleione.kittencare.KittenService;
 import com.pleiades.pleione.kittencare.R;
 import com.pleiades.pleione.kittencare.controller.DeviceController;
+import com.pleiades.pleione.kittencare.controller.PrefsController;
 
 import static com.pleiades.pleione.kittencare.Config.DIALOG_TYPE_RENAME;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SAILOR;
@@ -132,9 +133,17 @@ public class InputDialogFragment extends androidx.fragment.app.DialogFragment {
 
             if (type == DIALOG_TYPE_RENAME) {
                 String kittenName = inputEditText.getText().toString();
+
+                // set kitten name
                 editor.putString(KEY_NAME, kittenName);
+
+                // unlock sailor costume
                 editor.putBoolean(KEY_COSTUME_SAILOR, true);
                 editor.apply();
+
+                // set fan mode
+                if(kittenName.equals(getString(R.string.da0)))
+                    new PrefsController(context).setFanMode();
 
                 // restart kitten service
                 if (KittenService.kittenView != null) {
