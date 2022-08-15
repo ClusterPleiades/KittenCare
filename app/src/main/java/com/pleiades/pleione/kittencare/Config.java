@@ -163,16 +163,19 @@ public class Config {
     public static final int COSTUME_CODE_2021 = 15;
     public static final int COSTUME_CODE_GAME_MACHINE = 16;
     public static final int COSTUME_CODE_SAILOR = 17;
+    public static final int COSTUME_CODE_BLOSSOM = 18;
+    public static final int COSTUME_CODE_BUBBLE = 19;
+    public static final int COSTUME_CODE_BUTTERCUP = 20;
 
-    public static final int COSTUME_CODE_DINOSAUR = 20;
-    public static final int COSTUME_CODE_BEE = 21;
-    public static final int COSTUME_CODE_PENGUIN = 22;
-    public static final int COSTUME_CODE_SUNFLOWER = 23;
-    public static final int COSTUME_CODE_MAGICIAN = 24;
-    public static final int COSTUME_CODE_ASTRONAUT = 25;
-    public static final int COSTUME_CODE_MAID = 26;
-    public static final int COSTUME_CODE_ALCHEMIST = 27;
-    public static final int COSTUME_CODE_SEER = 28;
+    public static final int COSTUME_CODE_DINOSAUR = 21;
+    public static final int COSTUME_CODE_BEE = 22;
+    public static final int COSTUME_CODE_PENGUIN = 23;
+    public static final int COSTUME_CODE_SUNFLOWER = 24;
+    public static final int COSTUME_CODE_MAGICIAN = 25;
+    public static final int COSTUME_CODE_ASTRONAUT = 26;
+    public static final int COSTUME_CODE_MAID = 27;
+    public static final int COSTUME_CODE_ALCHEMIST = 28;
+    public static final int COSTUME_CODE_SEER = 29;
 
     // settings
     public static final float PROGRESS_TERM_MAGNET_PERCENTAGE = 0.05f;
@@ -227,6 +230,11 @@ public class Config {
     public static final String KEY_USE_CHERRY_ICE_CREAM = "use_cherry";
     public static final String KEY_USE_MELON_ICE_CREAM = "use_melon";
     public static final String KEY_USE_MINT_ICE_CREAM = "use_mint";
+    public static final String KEY_USE_GREEN_TEA_CAKE = "use_green_tea_cake";
+    public static final String KEY_USE_CHOCOLATE_CAKE = "use_chocolate_cake";
+    public static final String KEY_USE_CHERRY_CAKE = "use_cherry_cake";
+    public static final String KEY_USE_MELON_CAKE = "use_melon_cake";
+    public static final String KEY_USE_MINT_CAKE = "use_mint_cake";
 
     public static final String KEY_BUFF = "buff";
 
@@ -251,6 +259,9 @@ public class Config {
     public static final String KEY_COSTUME_2021 = "2021_costume";
     public static final String KEY_COSTUME_GAME_MACHINE = "game_machine_costume";
     public static final String KEY_COSTUME_SAILOR = "sailor_costume";
+    public static final String KEY_COSTUME_BLOSSOM = "blossom_costume";
+    public static final String KEY_COSTUME_BUBBLE = "bubble_costume";
+    public static final String KEY_COSTUME_BUTTERCUP = "buttercup_costume";
 
     public static final String KEY_COSTUME_DINOSAUR = "dinosaur_costume";
     public static final String KEY_COSTUME_BEE = "bee_costume";

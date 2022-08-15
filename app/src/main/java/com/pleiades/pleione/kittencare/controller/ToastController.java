@@ -7,6 +7,9 @@ import com.pleiades.pleione.kittencare.Converter;
 import com.pleiades.pleione.kittencare.R;
 import com.pleiades.pleione.kittencare.object.Costume;
 
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BLOSSOM;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUBBLE;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUTTERCUP;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_CHOCO;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_GAME_MACHINE;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_GIFT;
@@ -30,10 +33,16 @@ public class ToastController {
             showToast(context.getString(R.string.costume_condition_gift), Toast.LENGTH_SHORT);
         } else if (costume.costumeCode == COSTUME_CODE_CHOCO) {
             showToast(context.getString(R.string.costume_condition_choco), Toast.LENGTH_SHORT);
-        } else if (costume.costumeCode == COSTUME_CODE_GAME_MACHINE){
+        } else if (costume.costumeCode == COSTUME_CODE_GAME_MACHINE) {
             showToast(context.getString(R.string.costume_condition_game_machine), Toast.LENGTH_SHORT);
-        } else if (costume.costumeCode == COSTUME_CODE_SAILOR){
+        } else if (costume.costumeCode == COSTUME_CODE_SAILOR) {
             showToast(context.getString(R.string.costume_condition_sailor), Toast.LENGTH_SHORT);
+        } else if (costume.costumeCode == COSTUME_CODE_BLOSSOM) {
+            showToast(context.getString(R.string.costume_condition_blossom), Toast.LENGTH_SHORT);
+        } else if (costume.costumeCode == COSTUME_CODE_BUBBLE) {
+            showToast(context.getString(R.string.costume_condition_bubble), Toast.LENGTH_SHORT);
+        } else if (costume.costumeCode == COSTUME_CODE_BUTTERCUP) {
+            showToast(context.getString(R.string.costume_condition_buttercup), Toast.LENGTH_SHORT);
         }
     }
 

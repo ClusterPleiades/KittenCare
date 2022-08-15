@@ -36,6 +36,9 @@ import java.util.ArrayList;
 import static android.content.Context.MODE_PRIVATE;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_2021;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ALCYONE;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BLOSSOM;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUBBLE;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUTTERCUP;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_CHOCO;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_DEFAULT;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_GAME_MACHINE;
@@ -178,6 +181,9 @@ public class CostumeFragment extends Fragment {
                                 case COSTUME_CODE_CHOCO:
                                 case COSTUME_CODE_GAME_MACHINE:
                                 case COSTUME_CODE_SAILOR:
+                                case COSTUME_CODE_BLOSSOM:
+                                case COSTUME_CODE_BUBBLE:
+                                case COSTUME_CODE_BUTTERCUP:
                                     new ToastController(context).showCostumeConditionToast(costume);
                                     break;
                             }

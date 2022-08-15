@@ -22,104 +22,7 @@ import java.util.Locale;
 import java.util.Random;
 
 import static android.content.Context.MODE_PRIVATE;
-import static com.pleiades.pleione.kittencare.Config.BUFF_CODE_EXPERIENCE;
-import static com.pleiades.pleione.kittencare.Config.BUFF_CODE_FAIL;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_2021;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ALCHEMIST;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ALCYONE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ASTRONAUT;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BEE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BLAZER;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_CHOCO;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_COAT;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_DEFAULT;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_DINOSAUR;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_FLEECE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_GAME_MACHINE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_GIFT;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_HANBOK;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_HOODIE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_JACKET;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_MAGICIAN;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_MAID;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_PAJAMAS;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_PENGUIN;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_PLEIONE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_SAILOR;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_SEER;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_SHIRTS;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_SUNFLOWER;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_SWEATER;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_UNIFORM;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_TYPE_FREE;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_TYPE_PAID;
-import static com.pleiades.pleione.kittencare.Config.COSTUME_TYPE_SPECIAL;
-import static com.pleiades.pleione.kittencare.Config.EXPERIENCE_MAGNIFICATION;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_SIZE_MAX;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_COSTUME_FOUND;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_COSTUME_REWARD;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_ITEM_FOUND;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_ITEM_REWARD;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_ITEM_USED;
-import static com.pleiades.pleione.kittencare.Config.HISTORY_TYPE_LEVEL_UP;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_ALCHEMY;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_CHERRY_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_CHERRY_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_CHOCOLATE_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_CHOCOLATE_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_CRYSTAL_BALL;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_GREEN_TEA_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_GREEN_TEA_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_ICE_CREAM_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_MELON_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_MELON_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_MINT_CAKE;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_MINT_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_PLEIONE_DOLL;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_SCRATCHER;
-import static com.pleiades.pleione.kittencare.Config.ITEM_CODE_TOWER;
-import static com.pleiades.pleione.kittencare.Config.ITEM_TYPE_CONSUMPTION;
-import static com.pleiades.pleione.kittencare.Config.KEY_BUFF;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_2021;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ALCHEMIST;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ASTRONAUT;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BEE;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_CHOCO;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_DINOSAUR;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GAME_MACHINE;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_GIFT;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAGICIAN;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_MAID;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PENGUIN;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_PLEIONE;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SAILOR;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SEER;
-import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SUNFLOWER;
-import static com.pleiades.pleione.kittencare.Config.KEY_EXPERIENCE;
-import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_DINOSAUR;
-import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_PAJAMAS;
-import static com.pleiades.pleione.kittencare.Config.KEY_GAME_TICKET_PLEIADES;
-import static com.pleiades.pleione.kittencare.Config.KEY_HAPPINESS;
-import static com.pleiades.pleione.kittencare.Config.KEY_HISTORY_ARRAY_LIST;
-import static com.pleiades.pleione.kittencare.Config.KEY_ITEM_ARRAY_LIST;
-import static com.pleiades.pleione.kittencare.Config.KEY_ITEM_PLEIONE_DOLL;
-import static com.pleiades.pleione.kittencare.Config.KEY_ITEM_SCRATCHER;
-import static com.pleiades.pleione.kittencare.Config.KEY_LAST_CONSUMPTION_DATE_STRING;
-import static com.pleiades.pleione.kittencare.Config.KEY_LEVEL;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_CHERRY_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_CHOCOLATE_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_GREEN_TEA_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_ICE_CREAM_CAKE;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_MELON_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.KEY_USE_MINT_ICE_CREAM;
-import static com.pleiades.pleione.kittencare.Config.KEY_WORN_ARRAY_LIST;
-import static com.pleiades.pleione.kittencare.Config.LEVEL_MAX;
-import static com.pleiades.pleione.kittencare.Config.PREFS;
-import static com.pleiades.pleione.kittencare.Config.RANDOM_BOUND_ITEM_FOUND;
-import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_ADVERTISEMENT_ITEM;
-import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_EASY;
-import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_HARD;
-import static com.pleiades.pleione.kittencare.Config.TICKET_MAX;
+import static com.pleiades.pleione.kittencare.Config.*;
 
 // TODO update all
 public class PrefsController {
@@ -208,6 +111,9 @@ public class PrefsController {
         addCostume(costumeArrayList, COSTUME_CODE_ALCYONE, COSTUME_TYPE_SPECIAL);
         addCostume(costumeArrayList, COSTUME_CODE_PLEIONE, COSTUME_TYPE_SPECIAL);
         addCostume(costumeArrayList, COSTUME_CODE_SAILOR, COSTUME_TYPE_SPECIAL);
+        addCostume(costumeArrayList, COSTUME_CODE_BLOSSOM, COSTUME_TYPE_SPECIAL);
+        addCostume(costumeArrayList, COSTUME_CODE_BUBBLE, COSTUME_TYPE_SPECIAL);
+        addCostume(costumeArrayList, COSTUME_CODE_BUTTERCUP, COSTUME_TYPE_SPECIAL);
         addCostume(costumeArrayList, COSTUME_CODE_GAME_MACHINE, COSTUME_TYPE_SPECIAL);
         addCostume(costumeArrayList, COSTUME_CODE_GIFT, COSTUME_TYPE_SPECIAL);
         addCostume(costumeArrayList, COSTUME_CODE_CHOCO, COSTUME_TYPE_SPECIAL);
@@ -555,23 +461,27 @@ public class PrefsController {
                 break;
             case ITEM_CODE_GREEN_TEA_CAKE:
                 increasingExperience = (double) maxExperience / 100 * 50;
+                editor.putBoolean(KEY_USE_GREEN_TEA_CAKE, true);
                 break;
             case ITEM_CODE_CHOCOLATE_CAKE:
                 increasingExperience = (double) maxExperience / 100 * 30;
                 break;
             case ITEM_CODE_CHERRY_CAKE:
                 increasingExperience = (double) maxExperience / 100 * 20;
+                editor.putBoolean(KEY_USE_CHERRY_CAKE, true);
                 break;
             case ITEM_CODE_MELON_CAKE:
                 increasingExperience = (double) maxExperience / 100 * 10;
                 break;
             case ITEM_CODE_MINT_CAKE:
                 increasingExperience = (double) maxExperience / 100 * 5;
+                editor.putBoolean(KEY_USE_MINT_CAKE, true);
                 break;
             default:
                 increasingExperience = 0;
                 break;
         }
+        editor.apply();
         if (prefs.getBoolean(KEY_ITEM_PLEIONE_DOLL, false))
             increasingExperience += increasingExperience / 100 * 15;
         if (prefs.getBoolean(KEY_ITEM_SCRATCHER, false))
@@ -636,6 +546,20 @@ public class PrefsController {
                                 addHistoryPrefs(HISTORY_TYPE_COSTUME_FOUND, COSTUME_CODE_CHOCO);
                             }
                         }
+
+        // unlock PPGZ costumes
+        if (prefs.getBoolean(KEY_USE_CHERRY_ICE_CREAM, false) && prefs.getBoolean(KEY_USE_CHERRY_CAKE, false)) {
+            editor.putBoolean(KEY_COSTUME_BLOSSOM, true);
+            addHistoryPrefs(HISTORY_TYPE_COSTUME_FOUND, COSTUME_CODE_BLOSSOM);
+        }
+        if (prefs.getBoolean(KEY_USE_MINT_ICE_CREAM, false) && prefs.getBoolean(KEY_USE_MINT_CAKE, false)) {
+            editor.putBoolean(KEY_COSTUME_BUBBLE, true);
+            addHistoryPrefs(HISTORY_TYPE_COSTUME_FOUND, COSTUME_CODE_BUBBLE);
+        }
+        if (prefs.getBoolean(KEY_USE_GREEN_TEA_ICE_CREAM, false) && prefs.getBoolean(KEY_USE_GREEN_TEA_CAKE, false)) {
+            editor.putBoolean(KEY_COSTUME_BUTTERCUP, true);
+            addHistoryPrefs(HISTORY_TYPE_COSTUME_FOUND, COSTUME_CODE_BUTTERCUP);
+        }
 
         editor.apply();
     }

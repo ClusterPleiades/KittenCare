@@ -6,6 +6,9 @@ import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ALCYONE;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_ASTRONAUT;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BEE;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BLAZER;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BLOSSOM;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUBBLE;
+import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_BUTTERCUP;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_CHOCO;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_COAT;
 import static com.pleiades.pleione.kittencare.Config.COSTUME_CODE_DEFAULT;
@@ -65,6 +68,9 @@ import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ALCYONE;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_ASTRONAUT;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BEE;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BLAZER;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BLOSSOM;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BUBBLE;
+import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_BUTTERCUP;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_CHOCO;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_COAT;
 import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_DEFAULT;
@@ -333,6 +339,12 @@ public class Converter {
                 return context.getString(R.string.costume_title_game_machine);
             case COSTUME_CODE_SAILOR:
                 return context.getString(R.string.costume_title_sailor);
+            case COSTUME_CODE_BLOSSOM:
+                return context.getString(R.string.costume_title_blossom);
+            case COSTUME_CODE_BUBBLE:
+                return context.getString(R.string.costume_title_bubble);
+            case COSTUME_CODE_BUTTERCUP:
+                return context.getString(R.string.costume_title_buttercup);
 
             case COSTUME_CODE_DINOSAUR:
                 return context.getString(R.string.costume_title_dinosaur);
@@ -395,6 +407,12 @@ public class Converter {
                 return KEY_COSTUME_GAME_MACHINE;
             case COSTUME_CODE_SAILOR:
                 return KEY_COSTUME_SAILOR;
+            case COSTUME_CODE_BLOSSOM:
+                return KEY_COSTUME_BLOSSOM;
+            case COSTUME_CODE_BUBBLE:
+                return KEY_COSTUME_BUBBLE;
+            case COSTUME_CODE_BUTTERCUP:
+                return KEY_COSTUME_BUTTERCUP;
 
             case COSTUME_CODE_DINOSAUR:
                 return KEY_COSTUME_DINOSAUR;
@@ -458,6 +476,12 @@ public class Converter {
                 return COSTUME_CODE_GAME_MACHINE;
             case KEY_COSTUME_SAILOR:
                 return COSTUME_CODE_SAILOR;
+            case KEY_COSTUME_BLOSSOM:
+                return COSTUME_CODE_BLOSSOM;
+            case KEY_COSTUME_BUBBLE:
+                return COSTUME_CODE_BUBBLE;
+            case KEY_COSTUME_BUTTERCUP:
+                return COSTUME_CODE_BUTTERCUP;
 
             case KEY_COSTUME_DINOSAUR:
                 return COSTUME_CODE_DINOSAUR;
@@ -546,6 +570,12 @@ public class Converter {
                 return R.drawable.image_costume_game_machine;
             case COSTUME_CODE_SAILOR:
                 return R.drawable.image_costume_sailor;
+            case COSTUME_CODE_BLOSSOM:
+                return R.drawable.image_costume_blossom;
+            case COSTUME_CODE_BUBBLE:
+                return R.drawable.image_costume_bubble;
+            case COSTUME_CODE_BUTTERCUP:
+                return R.drawable.image_costume_buttercup;
 
             case COSTUME_CODE_DINOSAUR:
                 return R.drawable.image_costume_dinosaur;
