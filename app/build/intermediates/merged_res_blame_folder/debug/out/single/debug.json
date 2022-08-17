@@ -304,12 +304,12 @@
         "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\layout\\fragment_tutorial_experience.xml"
     },
     {
-        "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_game_pajamas_moon.png.flat",
-        "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_game_pajamas_moon.png"
-    },
-    {
         "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_costume_buttercup.png.flat",
         "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_costume_buttercup.png"
+    },
+    {
+        "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_game_pajamas_moon.png.flat",
+        "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_game_pajamas_moon.png"
     },
     {
         "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_drawable_game_sky_high_dark.xml.flat",
@@ -340,12 +340,12 @@
         "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_face_meow_2.png.flat",
-        "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_face_meow_2.png"
-    },
-    {
         "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_costume_bubble.png.flat",
         "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_costume_bubble.png"
+    },
+    {
+        "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_image_face_meow_2.png.flat",
+        "source": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-main-50:\\drawable\\image_face_meow_2.png"
     },
     {
         "merged": "C:\\Users\\speed\\.gradle\\daemon\\7.3.3\\com.pleiades.pleione.kittencare.app-merged_res-48:\\drawable_drawable_game_progress_transparent.xml.flat",
