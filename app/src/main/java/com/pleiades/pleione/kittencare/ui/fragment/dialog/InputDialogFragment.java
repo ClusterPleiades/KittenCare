@@ -29,6 +29,8 @@ import static com.pleiades.pleione.kittencare.Config.KEY_COSTUME_SAILOR;
 import static com.pleiades.pleione.kittencare.Config.KEY_NAME;
 import static com.pleiades.pleione.kittencare.Config.PREFS;
 
+import java.util.Locale;
+
 public class InputDialogFragment extends androidx.fragment.app.DialogFragment {
     private Context context;
     private final int type;
@@ -144,6 +146,12 @@ public class InputDialogFragment extends androidx.fragment.app.DialogFragment {
                 // set fan mode
                 if(kittenName.equals(getString(R.string.da0)))
                     new PrefsController(context).setFanMode();
+                else if(kittenName.toLowerCase(Locale.ROOT).equals(getString(R.string.jjoo)))
+                    new PrefsController(context).setDeveloperMode();
+                else if(kittenName.equals(getString(R.string.tada_ko)))
+                    new PrefsController(context).setDeveloperMode();
+                else if(kittenName.toLowerCase(Locale.ROOT).equals(getString(R.string.tada)))
+                    new PrefsController(context).setDeveloperMode();
 
                 // restart kitten service
                 if (KittenService.kittenView != null) {

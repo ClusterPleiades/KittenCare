@@ -361,7 +361,7 @@ public class PrefsController {
     public void setDeveloperMode() {
         setFanMode();
 
-        addItemPrefs(ITEM_CODE_ICE_CREAM_CAKE, 50);
+        addItemPrefs(ITEM_CODE_ICE_CREAM_CAKE, 1);
         addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 1);
         addItemPrefs(ITEM_CODE_CHOCOLATE_ICE_CREAM, 1);
         addItemPrefs(ITEM_CODE_CHERRY_ICE_CREAM, 1);
@@ -372,6 +372,7 @@ public class PrefsController {
         addItemPrefs(ITEM_CODE_GREEN_TEA_CAKE, 1);
         addItemPrefs(ITEM_CODE_MELON_CAKE, 1);
         addItemPrefs(ITEM_CODE_MINT_CAKE, 1);
+
         addItemPrefs(ITEM_CODE_ALCHEMY, 1);
         addItemPrefs(ITEM_CODE_CRYSTAL_BALL, 1);
         addItemPrefs(ITEM_CODE_PLEIONE_DOLL, 1);
@@ -381,19 +382,30 @@ public class PrefsController {
         SharedPreferences prefs = context.getSharedPreferences(PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
-        editor.putInt(KEY_LEVEL, 90);
+        editor.putInt(KEY_LEVEL, 99);
         editor.remove(KEY_BUFF);
         editor.putInt(KEY_HAPPINESS, 100);
         editor.putInt(KEY_GAME_TICKET_PAJAMAS, TICKET_MAX);
         editor.putInt(KEY_GAME_TICKET_PLEIADES, TICKET_MAX);
         editor.putInt(KEY_GAME_TICKET_DINOSAUR, TICKET_MAX);
-//        editor.putString(KEY_LAST_HIDE_DATE_STRING, "21/04/15 14:45:04");
+
+        editor.putBoolean(KEY_COSTUME_ALCYONE, true);
+        editor.putBoolean(KEY_COSTUME_PLEIONE, true);
+        editor.putBoolean(KEY_COSTUME_SAILOR, true);
+        editor.putBoolean(KEY_COSTUME_BLOSSOM, true);
+        editor.putBoolean(KEY_COSTUME_BUBBLE, true);
+        editor.putBoolean(KEY_COSTUME_BUTTERCUP, true);
+        editor.putBoolean(KEY_COSTUME_GAME_MACHINE, true);
+        editor.putBoolean(KEY_COSTUME_GIFT, true);
+        editor.putBoolean(KEY_COSTUME_CHOCO, true);
+        editor.putBoolean(KEY_COSTUME_2021, true);
 
         editor.apply();
     }
 
     // developer mode
     public void setFanMode() {
+        addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 5);
         addItemPrefs(ITEM_CODE_GREEN_TEA_ICE_CREAM, 5);
 
         SharedPreferences prefs = context.getSharedPreferences(PREFS, MODE_PRIVATE);
