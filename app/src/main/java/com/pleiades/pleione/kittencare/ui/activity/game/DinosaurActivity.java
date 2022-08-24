@@ -35,6 +35,7 @@ import com.pleiades.pleione.kittencare.Converter;
 import com.pleiades.pleione.kittencare.R;
 import com.pleiades.pleione.kittencare.controller.DeviceController;
 import com.pleiades.pleione.kittencare.controller.PrefsController;
+import com.pleiades.pleione.kittencare.controller.VibrationController;
 import com.pleiades.pleione.kittencare.object.Scenario;
 import com.pleiades.pleione.kittencare.ui.fragment.dialog.DefaultDialogFragment;
 
@@ -63,6 +64,7 @@ import static com.pleiades.pleione.kittencare.Config.PREFS;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_EASY;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_HARD;
 import static com.pleiades.pleione.kittencare.Config.SNIFF_ANGLE_RIGHT;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_CLICK;
 import static com.pleiades.pleione.kittencare.Converter.getFaceResourceId;
 
 public class DinosaurActivity extends AppCompatActivity {
@@ -100,6 +102,9 @@ public class DinosaurActivity extends AppCompatActivity {
     private boolean isGameDifficultyHard, isCloudMoving, isDinoFalling, isDinoLocked, isDinoSucceed;
     private long readCharDelay, shortAnimationDelay, defaultAnimationDelay, longAnimationDelay;
     private int animationCount, successCount;
+
+    // vibrate
+    VibrationController vibrationController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,6 +163,9 @@ public class DinosaurActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_dinosaur);
         targetView = findViewById(R.id.progress_target_dinosaur);
         leafImageView = findViewById(R.id.leaf_dinosaur);
+
+        // initialize vibration controller
+        vibrationController = new VibrationController(this);
 
         // start story
         startStory();
@@ -786,6 +794,9 @@ public class DinosaurActivity extends AppCompatActivity {
         button.setOnClickListener(v -> {
             if (isDinoFalling || (successCount == 20))
                 return;
+
+            // vibrate
+            vibrationController.vibrate(VIBRATION_TYPE_CLICK);
 
             // cancel animator progress
             cancelAnimatorProgress();

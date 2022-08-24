@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.pleiades.pleione.kittencare"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 32
         versionCode 35
         versionName "2.1.0"

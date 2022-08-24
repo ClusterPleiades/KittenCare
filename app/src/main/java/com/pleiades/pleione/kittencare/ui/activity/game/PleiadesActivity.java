@@ -33,6 +33,7 @@ import androidx.core.content.ContextCompat;
 import com.pleiades.pleione.kittencare.Converter;
 import com.pleiades.pleione.kittencare.R;
 import com.pleiades.pleione.kittencare.controller.PrefsController;
+import com.pleiades.pleione.kittencare.controller.VibrationController;
 import com.pleiades.pleione.kittencare.object.Scenario;
 import com.pleiades.pleione.kittencare.ui.fragment.dialog.DefaultDialogFragment;
 
@@ -67,6 +68,7 @@ import static com.pleiades.pleione.kittencare.Config.KEY_JUMP_DISTANCE;
 import static com.pleiades.pleione.kittencare.Config.PREFS;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_EASY;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_HARD;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_CLICK;
 import static com.pleiades.pleione.kittencare.Converter.getFaceResourceId;
 
 public class PleiadesActivity extends AppCompatActivity {
@@ -98,6 +100,9 @@ public class PleiadesActivity extends AppCompatActivity {
 
     private Timer timer;
     private TimerTask timerTask;
+
+    // vibrate
+    VibrationController vibrationController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +155,9 @@ public class PleiadesActivity extends AppCompatActivity {
         bedUpperImageView = findViewById(R.id.bed_upper_pleiades);
         bedPillarLeftImageView = findViewById(R.id.bed_pillar_left_pleiades);
         bedPillarRightImageView = findViewById(R.id.bed_pillar_right_pleiades);
+
+        // initialize vibration controller
+        vibrationController = new VibrationController(this);
 
         // start story
         startStory();
@@ -803,6 +811,9 @@ public class PleiadesActivity extends AppCompatActivity {
                     // play click sound
                     v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
 
+                    // vibrate
+                    vibrationController.vibrate(VIBRATION_TYPE_CLICK);
+
                     // set is button touched
                     isButtonTouched = true;
 
@@ -813,6 +824,9 @@ public class PleiadesActivity extends AppCompatActivity {
                 case MotionEvent.ACTION_UP:
                     // stop ripple effect
                     v.setPressed(false);
+
+                    // vibrate
+                    vibrationController.vibrate(VIBRATION_TYPE_CLICK);
 
                     // set is button touched
                     isButtonTouched = false;

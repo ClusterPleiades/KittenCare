@@ -12,6 +12,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Vibrator;
+import android.os.VibratorManager;
 import android.transition.ChangeBounds;
 import android.transition.Transition;
 import android.transition.TransitionManager;
@@ -42,6 +44,7 @@ import com.pleiades.pleione.kittencare.Converter;
 import com.pleiades.pleione.kittencare.R;
 import com.pleiades.pleione.kittencare.controller.DeviceController;
 import com.pleiades.pleione.kittencare.controller.PrefsController;
+import com.pleiades.pleione.kittencare.controller.VibrationController;
 import com.pleiades.pleione.kittencare.object.Scenario;
 import com.pleiades.pleione.kittencare.ui.fragment.dialog.DefaultDialogFragment;
 
@@ -72,6 +75,11 @@ import static com.pleiades.pleione.kittencare.Config.KEY_JUMP_DISTANCE;
 import static com.pleiades.pleione.kittencare.Config.PREFS;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_EASY;
 import static com.pleiades.pleione.kittencare.Config.REWARD_TYPE_GAME_ITEM_HARD;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_CLICK;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_LS;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_LW;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_SS;
+import static com.pleiades.pleione.kittencare.Config.VIBRATION_TYPE_SW;
 import static com.pleiades.pleione.kittencare.controller.AnimationController.calculateDurationGravity;
 
 public class PajamasActivity extends AppCompatActivity {
@@ -111,6 +119,9 @@ public class PajamasActivity extends AppCompatActivity {
     private boolean isPlayerButtonLocked, isEnemyButtonLocked;
     private int playerHP = 50;
     private int enemyHP = 50;
+
+    // vibrate
+    VibrationController vibrationController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,6 +185,9 @@ public class PajamasActivity extends AppCompatActivity {
         playerHPTextView = findViewById(R.id.hp_player_pajamas);
         enemyHPTextView = findViewById(R.id.hp_enemy_pajamas);
         enemySpeakerTextView = findViewById(R.id.speaker_enemy_pajamas);
+
+        // initialize vibration controller
+        vibrationController = new VibrationController(this);
 
         // start story
         startStory();
@@ -358,12 +372,15 @@ public class PajamasActivity extends AppCompatActivity {
                 switch (repeatCount) {
                     case 3:
                         floorSpeakerTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelSize(R.dimen.text_size_default));
+                        vibrationController.vibrate(VIBRATION_TYPE_SW);
                         break;
                     case 2:
                         floorSpeakerTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelSize(R.dimen.text_size_very_large));
+                        vibrationController.vibrate(VIBRATION_TYPE_SW);
                         break;
                     case 1:
                         floorSpeakerTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelSize(R.dimen.text_size_huge));
+                        vibrationController.vibrate(VIBRATION_TYPE_SS);
                         break;
                 }
                 floorSpeakerTextView.setVisibility(View.VISIBLE);
@@ -738,6 +755,9 @@ public class PajamasActivity extends AppCompatActivity {
                     // play click sound
                     v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
 
+                    // vibrate
+                    vibrationController.vibrate(VIBRATION_TYPE_CLICK);
+
                     // animate player progress bar
                     animatePlayerProgressBar();
 
@@ -749,6 +769,9 @@ public class PajamasActivity extends AppCompatActivity {
 
                     // stop ripple effect
                     v.setPressed(false);
+
+                    // vibrate
+                    vibrationController.vibrate(VIBRATION_TYPE_CLICK);
 
                     // lock button
                     isPlayerButtonLocked = true;

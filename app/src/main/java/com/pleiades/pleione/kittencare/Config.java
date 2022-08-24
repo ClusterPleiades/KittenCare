@@ -306,4 +306,17 @@ public class Config {
     public static final long DELAY_GAME_ANIMATION_SHORT = 500;
     public static final long DELAY_GAME_ANIMATION_DEFAULT = 1000;
     public static final long DELAY_GAME_ANIMATION_LONG = 2000;
+
+    public static final long VIBRATION_PERIOD_CLICK = 50;
+    public static final long VIBRATION_PERIOD_SHORT = 100;
+    public static final long VIBRATION_PERIOD_LONG = 200;
+    public static final int AMPLITUDE_CLICK = 50;
+    public static final int AMPLITUDE_WEAK = 100;
+    public static final int AMPLITUDE_STRONG = 200;
+
+    public static final int VIBRATION_TYPE_CLICK = 0;
+    public static final int VIBRATION_TYPE_SW = 10;
+    public static final int VIBRATION_TYPE_SS = 11;
+    public static final int VIBRATION_TYPE_LW = 12;
+    public static final int VIBRATION_TYPE_LS = 13;
 }
