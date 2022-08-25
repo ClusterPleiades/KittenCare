@@ -5,7 +5,7 @@ Android Application for Kitten Care Game
 ## Release
 <img src="https://user-images.githubusercontent.com/81938036/156919918-c1276a5a-65cd-4ee5-ace9-0c316d22074a.png" width="64" height="64">
 <a href="https://play.google.com/store/apps/details?id=com.pleiades.pleione.kittencare">
-  <img src="https://img.shields.io/badge/Play Store-2.0.0-FE7C8D">
+  <img src="https://img.shields.io/badge/Play Store-2.1.1-FE7C8D">
 </a>
 <a href="https://play.google.com/store/apps/details?id=com.pleiades.pleione.kittencare">
   <img src="https://img.shields.io/badge/Downloads-4.4k++-7EAFFE">
