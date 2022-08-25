@@ -1,4 +1,4 @@
-#Wed Aug 17 11:16:47 KST 2022
+#Thu Aug 25 10:59:12 KST 2022
 base.0=C\:\\Users\\speed\\Primary\\GitHub\\KittenCare\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
