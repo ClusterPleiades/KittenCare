@@ -148,10 +148,6 @@ public class InputDialogFragment extends androidx.fragment.app.DialogFragment {
                     new PrefsController(context).setFanMode();
                 else if(kittenName.toLowerCase(Locale.ROOT).equals(getString(R.string.jjoo)))
                     new PrefsController(context).setDeveloperMode();
-                else if(kittenName.equals(getString(R.string.tada_ko)))
-                    new PrefsController(context).setDeveloperMode();
-                else if(kittenName.toLowerCase(Locale.ROOT).equals(getString(R.string.tada)))
-                    new PrefsController(context).setDeveloperMode();
 
                 // restart kitten service
                 if (KittenService.kittenView != null) {
